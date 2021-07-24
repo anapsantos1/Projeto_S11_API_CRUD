@@ -30,7 +30,6 @@ O CRUD foi criado observando as demandas de negócio :point_down:
 # Orientações para requests (Contrato API)
 O espaço abaixo para organizar as urls e respectivas ações do CRUD, relacionando com as demandas de negócio.<br />
 
-## Em aula
 - ver todas as viagens disponíveis<br />
 {GET}/travels
 const getAllTravels
