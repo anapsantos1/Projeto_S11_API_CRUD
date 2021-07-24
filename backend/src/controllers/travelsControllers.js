@@ -21,14 +21,10 @@ const getTravelById = (req, res) => {
     res.status(200).send(filteredTravel);
 };
 
-//adicionar um novo passgeiro para uma viagem recebendo da requisição nome, email e id da viagem
+
 
 const createPeople = (req, res) => {
-    // trazer os dados da requisição
-
-    // let name = req.body.name
-    // let email = req.body.email
-    // let documentNumber = req.body.documentNumber
+   
 
     let {name, email, documentNumber} = req.body
 
@@ -50,8 +46,7 @@ const createPeople = (req, res) => {
         }
     })
 
-    // USAR MODULO FS PAA ESCREVER AS ALTERAÇÕES NO NOSSO ARQUIVO
-    //ENVIAR A RESPOSTA PRO POSTMAN
+   
     fs.writeFile("./src/models/travels.json", JSON.stringify(travels), 'utf8', function (err){
         if(err){
 
@@ -176,7 +171,7 @@ const updateName = (req, res) => {
 };
 
 const createDriver = (req, res) => {
-    // trazer os dados da requisição
+    
 
     let {name, license} = req.body
 
@@ -336,6 +331,13 @@ const deleteTravel = (req, res) => {
 
 }
 
+
+
+
+
+module.exports = {
+    getAllTravels, getTravelById, createPeople, deletePerson, updatePeople, updateName, createDriver,updatedriverInfos,modifydriverInfos,deleteTravel
+}
 
 
 
